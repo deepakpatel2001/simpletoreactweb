@@ -1,0 +1,1126 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-moz-selection {
+  background-color: #00acb1;
+}
+
+::selection {
+  background-color: #00acb1;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #005963;
+  height: 60px;
+  font-size: 1.4rem;
+  position: relative;
+}
+.header .headerClass {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.header .headerClass .address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6rem;
+  font-family: Rubik;
+}
+.header .headerClass .address ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Rubik;
+}
+.header .headerClass .address ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  text-decoration: none;
+  margin: 0 1rem;
+}
+.header .headerClass .address ul li a {
+  text-decoration: none;
+  color: white;
+  list-style: none;
+}
+.header .headerClass .address ul li a .spaceContent {
+  position: relative;
+  top: 3px;
+  margin-right: 0.7rem;
+}
+.header .headerClass .socialIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin: 1.4rem 8rem;
+}
+.header .headerClass .socialIcons .soIco {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .headerClass .socialIcons .soIco .socialUnder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .headerClass .socialIcons .soIco .socialUnder li {
+  list-style: none;
+  margin: 10px;
+  cursor: pointer;
+}
+.header .headerClass .socialIcons .soIco .socialUnder li .media {
+  font-weight: bolder;
+  font-size: 1.8rem;
+}
+.header .headerClass .socialIcons .profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 1.5rem;
+  cursor: pointer;
+}
+.header .headerClass .socialIcons .profile img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.imgTextContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #226d74;
+  height: 6.88084rem;
+  position: relative;
+  z-index: 1;
+}
+.imgTextContainer .logo {
+  height: 6.03621rem;
+  width: 13rem;
+  padding: 1rem 0;
+  min-height: auto;
+  min-width: auto;
+  margin-left: 8rem;
+}
+.imgTextContainer .logo img {
+  height: 100%;
+  width: 100%;
+}
+.imgTextContainer .centerData .cenDtaList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgTextContainer .centerData .cenDtaList li {
+  margin: 1rem;
+  list-style-type: none;
+  color: white;
+  font-size: 2rem;
+  font-family: Heebo;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.imgTextContainer .centerData .cenDtaList li:hover {
+  color: #00acb1;
+}
+.imgTextContainer .centerData .cenDtaList li:hover .subMenu {
+  display: block;
+}
+.imgTextContainer .centerData .cenDtaList li .subMenu {
+  display: none;
+  border: 2px solid black;
+  background-color: #ffffff;
+  border: none;
+  color: black;
+  position: absolute;
+  border-radius: 1rem;
+  top: 100%;
+  left: -1rem;
+}
+.imgTextContainer .centerData .cenDtaList li .subMenu li {
+  color: black;
+}
+.imgTextContainer .endData {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgTextContainer .endData .cartSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 4rem;
+}
+.imgTextContainer .endData .cartSection .underCartList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.imgTextContainer .endData .cartSection .underCartList li {
+  margin: 1.5rem;
+  list-style: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.imgTextContainer .mainButton {
+  margin-right: 8rem;
+}
+.imgTextContainer .mainButton button {
+  padding: 1.2rem 1.7rem;
+  background-color: #00acb1;
+  border-radius: 0.8rem;
+  font-size: 1.5rem;
+  font-family: Heebo;
+  color: white;
+  border: none;
+}
+
+.imagentext {
+  background-image: url("../images/1920x1280.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+.imagentext::before {
+  content: "";
+  background-color: rgba(34, 109, 116, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 0;
+}
+.imagentext .contentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 999;
+  color: white;
+}
+.imagentext .contentDiv .upperHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Heebo, sans-serif;
+  margin-bottom: 1rem;
+}
+.imagentext .contentDiv .upperHeading h4 {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+}
+.imagentext .contentDiv .middleHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Heebo, sans-serif;
+}
+.imagentext .contentDiv .middleHeading h2 {
+  font-size: 7rem;
+  line-height: 100%;
+}
+.imagentext .contentDiv .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.imagentext .contentDiv .buttons .buttonBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-family: Rubik, sans-serif;
+  text-transform: capitalize;
+  border: none;
+  padding-top: 0 1rem;
+  align-items: center;
+}
+.imagentext .contentDiv .buttons .btn1 {
+  background-color: #00acb1;
+  position: relative;
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.imagentext .contentDiv .buttons .btn1 .btnIcon {
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  right: 1rem;
+}
+.imagentext .contentDiv .buttons .btn2 {
+  color: #005963;
+  position: relative;
+  padding: 2rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.imagentext .contentDiv .buttons .btn2 .btnIcon {
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  right: 1rem;
+}
+
+.downContentDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top: 1.3rem solid #00acb1;
+  padding: 5rem;
+  margin: 0 10rem;
+  box-shadow: 0 0.6rem 0.6rem 0.6rem #f9f9f9;
+}
+.downContentDiv .contentCetnralDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.downContentDiv .contentCetnralDiv .leftDiv {
+  flex-direction: column;
+  text-align: justify;
+}
+.downContentDiv .contentCetnralDiv .leftDiv .leftHeading {
+  margin: 0.8rem 0;
+}
+.downContentDiv .contentCetnralDiv .leftDiv .leftHeading h3 {
+  color: #686a6f;
+  text-align: justify;
+  font-family: Rubik, sans-serif;
+  font-size: medium;
+}
+.downContentDiv .contentCetnralDiv .leftDiv .leftInput {
+  position: relative;
+}
+.downContentDiv .contentCetnralDiv .leftDiv .leftInput input {
+  width: 50rem;
+  padding: 1.5rem;
+  border: 1px solid #ebf2f3;
+  outline: none;
+}
+.downContentDiv .contentCetnralDiv .leftDiv .leftInput .searchIcon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  font-size: 2rem;
+  color: #a5a5a5;
+}
+.downContentDiv .contentCetnralDiv .rightDiv {
+  flex-direction: column;
+  text-align: justify;
+}
+.downContentDiv .contentCetnralDiv .rightDiv .rightHeading {
+  margin: 0.8rem 0;
+}
+.downContentDiv .contentCetnralDiv .rightDiv .rightHeading h3 {
+  color: #686a6f;
+  text-align: justify;
+  font-family: Rubik, sans-serif;
+  font-size: medium;
+}
+.downContentDiv .contentCetnralDiv .rightDiv .rightInput input {
+  width: 50rem;
+  padding: 1.5rem;
+  border: 1px solid #ebf2f3;
+}
+
+.cardsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6rem;
+  padding: 2rem;
+}
+.cardsDiv .card {
+  position: relative;
+  margin: 1rem;
+  width: 25%;
+  border: 2px solid #ebf2f3;
+  color: #686a6f;
+  font-size: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+.cardsDiv .card:hover .cardIcons {
+  transform: translateY(-1rem);
+}
+.cardsDiv .card .cardIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -3rem;
+  height: 6rem;
+  width: 25%;
+  color: #00acb1;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+.cardsDiv .card .cardData {
+  margin-top: 3rem;
+}
+.cardsDiv .card .cardData h3 {
+  margin: 1rem 0;
+  color: #00787b;
+  font-family: Heebo, sans-serif;
+}
+.cardsDiv .card .cardData p {
+  margin: 1rem 0;
+  font-family: Heebo, sans-serif;
+}
+.cardsDiv .card .rightArrow .arrow {
+  color: #00acb1;
+}
+
+.superChooseDiv {
+  position: relative;
+}
+.superChooseDiv .chooseMainDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #669ba1;
+  padding: 10rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem;
+  margin-bottom: 10rem;
+  gap: 4rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv {
+  flex-direction: column;
+  height: 481.547px;
+  width: 474.989px;
+  padding: 0 1.2rem 0 1.2rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .leftUpperContentDivHeading {
+  text-align: justify;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .leftUpperContentDivHeading h2 {
+  font-family: Heebo, sans-serif;
+  font-size: 6rem;
+  color: white;
+  line-height: 6rem;
+  font-weight: 700;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .dummyPara {
+  color: #e0ebec;
+  margin: 1.5rem 0;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .dummyPara p {
+  font-size: 2rem;
+  font-family: Rubik, sans-serif;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons {
+  margin-top: 2.5rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .heartIcons {
+  display: flex;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .heartIcons .iconsheart {
+  font-size: 4rem;
+  color: white;
+  margin: 0 1.2rem 0 0;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .heartIcons .iconsDescription {
+  font-family: Rubik, sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .heartIcons .iconsDescription h4 {
+  font-family: Heebo, sans-serif;
+  margin-top: 0.4rem;
+  margin-bottom: 2rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .heartIcons .iconsDescription p {
+  color: #e0ebec;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .leftContentDiv .paraWithIcons .heartnPeople .peopleIcons {
+  margin-top: 2rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .rightContentDiv {
+  height: 481.574px;
+  width: 569.988px;
+  margin: 0 0 0 1rem;
+  padding: 0 1.2rem 0 1.2rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .rightContentDiv .allImages {
+  margin-left: 5rem;
+  position: relative;
+  height: 100%;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .rightContentDiv .allImages .firstImage {
+  position: relative;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .rightContentDiv .allImages .firstImage img {
+  border-radius: 1.5rem;
+}
+.superChooseDiv .chooseMainDiv .contentWithImages .rightContentDiv .allImages .secondImage {
+  position: absolute;
+  top: 22rem;
+  left: 15rem;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.superChooseDiv .countDownArea {
+  position: absolute;
+  top: 75rem;
+  left: 9rem;
+  background-color: #00acb1;
+  margin: 0 8rem;
+  height: 22rem;
+  bottom: 0;
+  width: 80%;
+}
+.superChooseDiv .countDownArea .mainCountDownDiv {
+  background-image: url(../images/pattern-2.png);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.superChooseDiv .countDownArea .mainCountDownDiv .underCountDiv {
+  margin: 0 4rem;
+  padding: 1rem;
+  color: white;
+  font-family: Rubik, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.superChooseDiv .countDownArea .mainCountDownDiv .underCountDiv .countHeading h4 {
+  font-size: 4rem;
+  margin: 0.5rem 0;
+}
+.superChooseDiv .countDownArea .mainCountDownDiv .underCountDiv .countPara p {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.servicesDiv {
+  margin-top: 15rem;
+  background-color: #fcf7ff;
+}
+.servicesDiv .servicesUpperDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 8rem;
+}
+.servicesDiv .servicesUpperDiv .underServicesHeading {
+  color: #00acb1;
+  font-family: Rubik, sans-serif;
+}
+.servicesDiv .servicesUpperDiv .underServicesHeading h4 {
+  font-size: 2rem;
+}
+.servicesDiv .servicesUpperDiv .subServicesHeading {
+  color: #005963;
+  font-family: Heebo, sans-serif;
+}
+.servicesDiv .servicesUpperDiv .subServicesHeading h2 {
+  font-size: 5rem;
+}
+.servicesDiv .servicesImage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem;
+  padding: 4rem;
+  gap: 2rem;
+}
+.servicesDiv .servicesImage .servicesImageDiv {
+  border: 1px solid #dce4e5;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease;
+}
+.servicesDiv .servicesImage .servicesImageDiv:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-color: none;
+  background-color: #ffffff;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serImg img {
+  width: 100%;
+  height: 100%;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription {
+  padding: 2rem 3.5rem 2rem 2rem;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .mainSerDescription {
+  color: #00acb1;
+  font-family: Heebo, sans-serif;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .mainSerDescription h4 {
+  font-size: 2.5rem;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .serDummyPara {
+  margin: 1rem 0;
+  color: #686a6f;
+  font-family: Rubik, sans-serif;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .serDummyPara p {
+  font-size: 1.8rem;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .serReadMore {
+  color: #00acb1;
+  font-family: Rubik, sans-serif;
+  display: inline-block;
+  position: relative;
+  margin: 1rem 0;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .serReadMore h4 {
+  font-size: 1.7rem;
+}
+.servicesDiv .servicesImage .servicesImageDiv .serDescription .serReadMore h4 span {
+  position: absolute;
+  top: 0.4rem;
+  left: 9.5rem;
+}
+
+.mainMailDiv {
+  margin-top: -2rem;
+  display: flex;
+  background-color: #fcf7ff;
+  gap: 5rem;
+  padding: 1rem 0;
+}
+.mainMailDiv .leftSideMail {
+  flex-direction: column;
+  background-color: #00acb1;
+  padding: 5rem;
+  border-radius: 1rem;
+  margin-left: 6rem;
+}
+.mainMailDiv .leftSideMail .upperIconWithMail {
+  display: flex;
+  width: 100%;
+}
+.mainMailDiv .leftSideMail .upperIconWithMail .upperIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  color: white;
+  margin-right: 1rem;
+}
+.mainMailDiv .leftSideMail .upperIconWithMail .upperContentData {
+  color: white;
+}
+.mainMailDiv .leftSideMail .upperIconWithMail .upperContentData h2 {
+  font-size: 3rem;
+  font-family: Heebo, sans-serif;
+  line-height: 4rem;
+}
+.mainMailDiv .leftSideMail .centerMailContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Rubik, sans-serif;
+  color: white;
+  margin: 1.5rem 0 1.8rem 0;
+}
+.mainMailDiv .leftSideMail .centerMailContent .dummPara {
+  width: 42rem;
+}
+.mainMailDiv .leftSideMail .centerMailContent .dummPara p {
+  font-size: 2rem;
+}
+.mainMailDiv .leftSideMail .inputMailButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid white;
+  border-radius: 0.7rem;
+  width: 100%;
+  padding: 1.2rem;
+  gap: 1rem;
+}
+.mainMailDiv .leftSideMail .inputMailButton .inputBoxMail {
+  color: white;
+  width: 100%;
+}
+.mainMailDiv .leftSideMail .inputMailButton .inputBoxMail input {
+  height: 5rem;
+  width: 100%;
+  color: white;
+  outline: none;
+  border: none;
+  padding-left: 0.8rem;
+  background-color: #00acb1;
+}
+.mainMailDiv .leftSideMail .inputMailButton .inputBoxMail input::-moz-placeholder {
+  color: white;
+}
+.mainMailDiv .leftSideMail .inputMailButton .inputBoxMail input::placeholder {
+  color: white;
+}
+.mainMailDiv .leftSideMail .inputMailButton .buttonWithMessageIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  cursor: pointer;
+}
+.mainMailDiv .leftSideMail .inputMailButton .buttonWithMessageIcon button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.4rem;
+  outline: none;
+  padding: 1rem;
+  gap: 0.8rem;
+  color: #005963;
+  border: none;
+}
+.mainMailDiv .leftSideMail .inputMailButton .buttonWithMessageIcon button .messageMailIcon {
+  font-size: 3rem;
+}
+.mainMailDiv .leftSideMail .inputMailButton .buttonWithMessageIcon button .messageMailIcon .mesIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainMailDiv .leftSideMail .inputMailButton .buttonWithMessageIcon button .subscribeHeading {
+  font-size: 2rem;
+}
+.mainMailDiv .rightSideMail {
+  background-color: white;
+  margin-left: 16rem;
+}
+.mainMailDiv .rightSideMail .mainRightSideDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv {
+  padding: 3rem;
+}
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .oneDiv,
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .secondDiv,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .oneDiv,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .secondDiv {
+  margin-bottom: 1rem;
+}
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .oneDiv img,
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .secondDiv img,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .oneDiv img,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .secondDiv img {
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .oneDiv img:hover,
+.mainMailDiv .rightSideMail .mainRightSideDiv .upperTwoDiv .secondDiv img:hover,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .oneDiv img:hover,
+.mainMailDiv .rightSideMail .mainRightSideDiv .lowerTwoDiv .secondDiv img:hover {
+  transform: scale(1.1);
+}
+
+.workProcessParentDiv {
+  background-color: #fcf7ff;
+  padding: 0 6rem;
+  margin-bottom: 1rem;
+}
+.workProcessParentDiv .upperWorkProcess {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessHeading .smallHeadingProcess {
+  margin-top: 4rem;
+  color: #00acb1;
+  font-family: Rubik, sans-serif;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessHeading .smallHeadingProcess h5 {
+  font-size: 2rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessHeading .bigHeadingProcess {
+  font-family: Heebo, sans-serif;
+  color: #005963;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessHeading .bigHeadingProcess h3 {
+  margin-top: 0.8rem;
+  font-size: 6rem;
+  line-height: 5rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessPara {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 5rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessPara .wpPara {
+  width: 42rem;
+  color: #686a6f;
+  font-family: Rubik, sans-serif;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessPara .wpPara p {
+  font-size: 1.9rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessPara .buttonAppointment {
+  padding: 1rem;
+}
+.workProcessParentDiv .upperWorkProcess .workProcessPara .buttonAppointment button {
+  background-color: #32bab6;
+  font-family: Rubik, sans-serif;
+  color: white;
+  font-size: 2rem;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  outline: none;
+  padding: 2rem;
+}
+.workProcessParentDiv .lowerWorkProcess {
+  margin-top: 2rem;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv {
+  display: flex;
+  gap: 2rem;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivIcon {
+  height: 10rem;
+  background-color: white;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivIcon .wpDifferentIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 6rem;
+  color: #32bab6;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivContent .lowerWorkHeading h4 {
+  font-size: 2.7rem;
+  color: #005963;
+  font-family: Heebo, sans-serif;
+  line-height: 3rem;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivContent .lowerWorkParagraph {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  margin: 1rem 0;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivContent .lowerWorkParagraph p {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  color: #686a6f;
+  font-family: Rubik, sans-serif;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivContent .lowerWorkStep {
+  color: #32bab6;
+  font-family: Rubik, sans-serif;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .oneLowerWorkDiv .lowerWorkDivContent .lowerWorkStep h4 {
+  font-size: 2.7rem;
+}
+.workProcessParentDiv .lowerWorkProcess .mainLowerWorkProcess .secondLowerWorkDiv {
+  margin: 2rem 3rem;
+}
+
+.mainArticleDiv {
+  background-color: #fcf7ff;
+}
+.mainArticleDiv .articleHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainArticleDiv .articleHeading .articleSmallHeading {
+  color: #00acb1;
+  margin-top: 2rem;
+}
+.mainArticleDiv .articleHeading .articleSmallHeading h4 {
+  font-size: 2rem;
+  font-family: Rubik, sans-serif;
+}
+.mainArticleDiv .articleHeading .articleBigHeading {
+  color: #005963;
+}
+.mainArticleDiv .articleHeading .articleBigHeading h3 {
+  font-size: 6rem;
+  font-family: Heebo, sans-serif;
+}
+.mainArticleDiv .articleCard {
+  margin-top: 2rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard {
+  margin: 1rem 0;
+  border: 2px solid #eaf1f2;
+  padding: 0 2rem;
+  background-color: white;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard {
+  margin: 1rem 0;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .articleImage {
+  position: relative;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .articleImage .firstImageClass {
+  overflow: hidden;
+  border-radius: 1.4rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .articleImage .firstImageClass img {
+  transition: all 0.4s ease;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .articleImage .firstImageClass img:hover {
+  transform: scale(1.1);
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .articleImage .dateDiv {
+  position: absolute;
+  top: 21.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-family: Heebo, sans-serif;
+  color: white;
+  font-weight: 600;
+  background-color: #00acb1;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv {
+  margin-top: 3rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .iconsArticleDiv {
+  display: flex;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .iconsArticleDiv .userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .iconsArticleDiv .userIcon span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #686a6f;
+  margin-right: 1rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .iconsArticleDiv .userIcon p {
+  color: #686a6f;
+  font-size: 1.6rem;
+  font-family: Heebo, sans-serif;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .iconsArticleDiv .folderIcon {
+  margin: 0 2rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .cardArticleHeading {
+  margin-top: 1rem;
+  color: #005963;
+  width: 22rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .cardArticleHeading h5 {
+  font-size: 2rem;
+  font-family: Heebo, sans-serif;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .cardArticleReadMore {
+  color: #00acb1;
+  margin-top: 1rem;
+}
+.mainArticleDiv .articleCard .mainArticleCard .secondLevelCard .underArticleCard .lowerArticleDiv .cardArticleReadMore p {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: Rubik, sans-serif;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.gallery__item {
+  position: relative;
+  flex-basis: calc(25% - 20px);
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: 20%;
+}
+.gallery__item:hover img {
+  transform: scale(1.1);
+}
+.gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery__item .gallery__overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.gallery__item .gallery__overlay:hover {
+  opacity: 1;
+}
+.gallery__item .gallery__overlay i {
+  font-size: 32px;
+  color: #fff;
+  transition: transform 0.3s ease-in-out;
+}
+.gallery__item:hover .gallery__overlay {
+  opacity: 1;
+}
+.gallery__item:hover .gallery__overlay i {
+  transform: scale(1.2);
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.lightbox .lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.lightbox .lightbox__content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+}
+.lightbox .lightbox__content img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  max-height: calc(100vh - 120px);
+}
+.lightbox .lightbox__content .lightbox__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.mainClientDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+}
+.mainClientDiv .upperClientDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.mainClientDiv .upperClientDiv .upperClientUpperHeading {
+  font-family: Rubik, sans-serif;
+  color: #00acb1;
+}
+.mainClientDiv .upperClientDiv .upperClientUpperHeading h5 {
+  text-align: center;
+  font-size: 2rem;
+}
+.mainClientDiv .upperClientDiv .upperClientLowerHeading {
+  font-family: Heebo, sans-serif;
+  color: #005963;
+}
+.mainClientDiv .upperClientDiv .upperClientLowerHeading h3 {
+  font-size: 5rem;
+}
+.mainClientDiv .lowerClientDiv {
+  width: 100%;
+}
+.mainClientDiv .lowerClientDiv .sliderMainDiv {
+  margin: 0 2rem;
+  height: 100%;
+}
+.mainClientDiv .lowerClientDiv .sliderMainDiv .slick-slide {
+  margin-right: 1rem;
+}/*# sourceMappingURL=index.css.map */

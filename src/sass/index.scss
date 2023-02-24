@@ -1,0 +1,1206 @@
+@import "mixin";
+@import "variables";
+
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body{
+  overflow: hidden;
+}
+
+::selection {
+  background-color: #00acb1;
+}
+
+.header {
+  @include flexBoxSpace;
+  background-color: #005963;
+  height: 60px;
+  font-size: 1.4rem;
+  position: relative;
+
+  .headerClass {
+    @include flexBoxSpace;
+    width: 100%;
+
+    .address {
+      @include flexBoxCenter;
+      margin-left: 6rem;
+      font-family: Rubik;
+
+      ul {
+        @include flexBoxCenter;
+        font-family: Rubik;
+
+        li {
+          @include flexBoxCenter;
+          list-style: none;
+          text-decoration: none;
+          margin: 0 1rem;
+
+          a {
+            text-decoration: none;
+            color: white;
+            list-style: none;
+
+            .spaceContent {
+              position: relative;
+              top: 3px;
+              margin-right: 0.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .socialIcons {
+      @include flexBoxCenter;
+      color: white;
+      margin: 1.4rem 8rem;
+
+      .soIco {
+        @include flexBoxCenter;
+
+        .socialUnder {
+          @include flexBoxCenter;
+
+          li {
+            list-style: none;
+            margin: 10px;
+            cursor: pointer;
+
+            .media {
+              font-weight: bolder;
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+
+      .profile {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin-left: 1.5rem;
+        cursor: pointer;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.imgTextContainer {
+  @include flexBoxSpace;
+  background-color: #226d74;
+  height: 6.88084rem;
+  position: relative;
+  z-index: 1;
+
+  .logo {
+    height: 6.03621rem;
+    width: 13rem;
+    padding: 1rem 0;
+    min-height: auto;
+    min-width: auto;
+    margin-left: 8rem;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .centerData {
+    .cenDtaList {
+      @include flexBoxCenter;
+
+      li {
+        margin: 1rem;
+        list-style-type: none;
+        color: white;
+        font-size: 2rem;
+        font-family: Heebo;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: #00acb1;
+        }
+
+        &:hover .subMenu {
+          display: block;
+        }
+
+        .subMenu {
+          display: none;
+          border: 2px solid black;
+          background-color: #ffffff;
+          border: none;
+          color: black;
+          position: absolute;
+          border-radius: 1rem;
+          top: 100%;
+          left: -1rem;
+
+          li {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  .endData {
+    @include flexBoxCenter;
+
+    .cartSection {
+      @include flexBoxCenter;
+      margin-right: 4rem;
+
+      .underCartList {
+        @include flexBoxCenter;
+
+        li {
+          margin: 1.5rem;
+          list-style: none;
+          color: white;
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .mainButton {
+    margin-right: 8rem;
+    button {
+      padding: 1.2rem 1.7rem;
+      background-color: #00acb1;
+      border-radius: 0.8rem;
+      font-size: 1.5rem;
+      font-family: Heebo;
+      color: white;
+      border: none;
+    }
+  }
+}
+
+.imagentext {
+  background-image: url("../images/1920x1280.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    content: "";
+    background-color: rgba(34, 109, 116, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    z-index: 0;
+  }
+
+  .contentDiv {
+    @include flexBoxCenter;
+    flex-direction: column;
+    z-index: 999;
+    color: white;
+
+    .upperHeading {
+      @include flexBoxCenter;
+      font-family: Heebo, sans-serif;
+      margin-bottom: 1rem;
+
+      h4 {
+        font-size: 2rem;
+        font-weight: 800;
+        text-align: center;
+      }
+    }
+
+    .middleHeading {
+      @include flexBoxCenter;
+      flex-direction: column;
+      font-family: Heebo, sans-serif;
+
+      h2 {
+        font-size: 7rem;
+        line-height: 100%;
+      }
+    }
+
+    .buttons {
+      @include flexBoxCenter;
+      margin-top: 1rem;
+
+      .buttonBtn {
+        @include flexBoxCenter;
+        margin: 1rem;
+        border-radius: 0.5rem;
+        color: white;
+        font-family: Rubik, sans-serif;
+        text-transform: capitalize;
+        border: none;
+        padding-top: 0 1rem;
+        align-items: center;
+      }
+
+      .btn1 {
+        background-color: #00acb1;
+        position: relative;
+        padding: 2rem 4rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        .btnIcon {
+          position: absolute;
+          right: 0;
+          top: 2.2rem;
+          right: 1rem;
+        }
+      }
+
+      .btn2 {
+        color: #005963;
+        position: relative;
+        padding: 2rem 4rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+
+        .btnIcon {
+          position: absolute;
+          right: 0;
+          top: 2.2rem;
+          right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.downContentDiv {
+  @include flexBoxCenter;
+  background-color: white;
+  border-top: 1.3rem solid #00acb1;
+  padding: 5rem;
+  margin: 0 10rem;
+  box-shadow: 0 0.6rem 0.6rem 0.6rem #f9f9f9;
+
+  .contentCetnralDiv {
+    @include flexBoxSpace;
+    width: 100%;
+
+    .leftDiv {
+      flex-direction: column;
+      text-align: justify;
+
+      .leftHeading {
+        margin: 0.8rem 0;
+        h3 {
+          color: #686a6f;
+          text-align: justify;
+          font-family: Rubik, sans-serif;
+          font-size: medium;
+        }
+      }
+
+      .leftInput {
+        position: relative;
+        input {
+          width: 50rem;
+          padding: 1.5rem;
+          border: 1px solid #ebf2f3;
+          outline: none;
+        }
+        .searchIcon {
+          position: absolute;
+          right: 1rem;
+          top: 1.5rem;
+          font-size: 2rem;
+          color: #a5a5a5;
+        }
+      }
+    }
+
+    .rightDiv {
+      flex-direction: column;
+      text-align: justify;
+
+      .rightHeading {
+        margin: 0.8rem 0;
+        h3 {
+          color: #686a6f;
+          text-align: justify;
+          font-family: Rubik, sans-serif;
+          font-size: medium;
+        }
+      }
+
+      .rightInput {
+        input {
+          width: 50rem;
+          padding: 1.5rem;
+          border: 1px solid #ebf2f3;
+        }
+      }
+    }
+  }
+}
+
+.cardsDiv {
+  @include flexBoxSpace;
+  margin: 6rem;
+  padding: 2rem;
+  .card {
+    position: relative;
+    margin: 1rem;
+    width: 25%;
+    border: 2px solid #ebf2f3;
+    color: #686a6f;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    &:hover .cardIcons {
+      transform: translateY(-1rem);
+    }
+
+    .cardIcons {
+      @include flexBoxCenter;
+      position: absolute;
+      top: -3rem;
+      height: 6rem;
+      width: 25%;
+      color: #00acb1;
+      background-color: white;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      font-size: 3rem;
+      transition: all 0.3s ease;
+    }
+    .cardData {
+      margin-top: 3rem;
+
+      h3 {
+        margin: 1rem 0;
+        color: #00787b;
+        font-family: Heebo, sans-serif;
+      }
+      p {
+        margin: 1rem 0;
+        font-family: Heebo, sans-serif;
+      }
+    }
+
+    .rightArrow {
+      .arrow {
+        color: #00acb1;
+      }
+    }
+  }
+}
+
+.superChooseDiv {
+  position: relative;
+  .chooseMainDiv {
+    @include flexBoxCenter;
+    background-color: #669ba1;
+    padding: 10rem;
+
+    .contentWithImages {
+      @include flexBoxSpace;
+      padding: 5rem;
+      margin-bottom: 10rem;
+      gap: 4rem;
+
+      .leftContentDiv {
+        flex-direction: column;
+        height: 481.547px;
+        width: 474.989px;
+        padding: 0 1.2rem 0 1.2rem;
+
+        .leftUpperContentDivHeading {
+          text-align: justify;
+
+          h2 {
+            font-family: Heebo, sans-serif;
+            font-size: 6rem;
+            color: white;
+            line-height: 6rem;
+            font-weight: 700;
+          }
+        }
+
+        .dummyPara {
+          color: #e0ebec;
+          margin: 1.5rem 0;
+
+          p {
+            font-size: 2rem;
+            font-family: Rubik, sans-serif;
+          }
+        }
+
+        .paraWithIcons {
+          margin-top: 2.5rem;
+          .heartnPeople {
+            .heartIcons {
+              display: flex;
+
+              .iconsheart {
+                font-size: 4rem;
+                color: white;
+                margin: 0 1.2rem 0 0;
+              }
+
+              .iconsDescription {
+                font-family: Rubik, sans-serif;
+                font-size: 2rem;
+                color: white;
+
+                h4 {
+                  font-family: Heebo, sans-serif;
+                  margin-top: 0.4rem;
+                  margin-bottom: 2rem;
+                }
+
+                p {
+                  color: #e0ebec;
+                }
+              }
+            }
+
+            .peopleIcons {
+              margin-top: 2rem;
+            }
+          }
+        }
+      }
+
+      .rightContentDiv {
+        height: 481.574px;
+        width: 569.988px;
+        margin: 0 0 0 1rem;
+        padding: 0 1.2rem 0 1.2rem;
+
+        .allImages {
+          margin-left: 5rem;
+          position: relative;
+          height: 100%;
+
+          .firstImage {
+            position: relative;
+            img {
+              border-radius: 1.5rem;
+            }
+          }
+
+          .secondImage {
+            position: absolute;
+            top: 22rem;
+            left: 15rem;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .countDownArea {
+    position: absolute;
+    top: 75rem;
+    left: 9rem;
+    background-color: #00acb1;
+    margin: 0 8rem;
+    height: 22rem;
+    bottom: 0;
+    width: 80%;
+
+    .mainCountDownDiv {
+      background-image: url(../images/pattern-2.png);
+      background-size: cover;
+      height: 100%;
+      width: 100%;
+      padding: 6rem;
+      @include flexBoxCenter;
+      overflow: hidden;
+
+      .underCountDiv {
+        margin: 0 4rem;
+        padding: 1rem;
+        color: white;
+        font-family: Rubik, sans-serif;
+        @include flexBoxCenter;
+        flex-direction: column;
+
+        .countHeading {
+          h4 {
+            font-size: 4rem;
+            margin: 0.5rem 0;
+          }
+        }
+        .countPara {
+          p {
+            margin: 0.5rem 0;
+            font-size: 2rem;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.servicesDiv {
+  margin-top: 15rem;
+  background-color: #fcf7ff;
+
+  .servicesUpperDiv {
+    @include flexBoxCenter;
+    flex-direction: column;
+    margin-top: 8rem;
+
+    .underServicesHeading {
+      color: #00acb1;
+      font-family: Rubik, sans-serif;
+
+      h4 {
+        font-size: 2rem;
+      }
+    }
+
+    .subServicesHeading {
+      color: #005963;
+      font-family: Heebo, sans-serif;
+
+      h2 {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .servicesImage {
+    @include flexBoxSpace;
+    margin: 2rem;
+    padding: 4rem;
+    gap: 2rem;
+
+    .servicesImageDiv {
+      border: 1px solid #dce4e5;
+      border-radius: 0.8rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-color: none;
+        background-color: #ffffff;
+      }
+
+      .serImg {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .serDescription {
+        padding: 2rem 3.5rem 2rem 2rem;
+
+        .mainSerDescription {
+          color: #00acb1;
+          font-family: Heebo, sans-serif;
+
+          h4 {
+            font-size: 2.5rem;
+          }
+        }
+
+        .serDummyPara {
+          margin: 1rem 0;
+          color: #686a6f;
+          font-family: Rubik, sans-serif;
+
+          p {
+            font-size: 1.8rem;
+          }
+        }
+
+        .serReadMore {
+          color: #00acb1;
+          font-family: Rubik, sans-serif;
+          display: inline-block;
+          position: relative;
+          margin: 1rem 0;
+
+          h4 {
+            font-size: 1.7rem;
+
+            span {
+              position: absolute;
+              top: 0.4rem;
+              left: 9.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mainMailDiv {
+  margin-top: -2rem;
+  display: flex;
+  background-color: #fcf7ff;
+  gap: 5rem;
+  padding: 1rem 0;
+
+  .leftSideMail {
+    flex-direction: column;
+    background-color: #00acb1;
+    padding: 5rem;
+    border-radius: 1rem;
+    margin-left: 6rem;
+
+    .upperIconWithMail {
+      display: flex;
+      width: 100%;
+
+      .upperIcon {
+        @include flexBoxCenter;
+        font-size: 6rem;
+        color: white;
+        margin-right: 1rem;
+      }
+
+      .upperContentData {
+        color: white;
+
+        h2 {
+          font-size: 3rem;
+          font-family: Heebo, sans-serif;
+          line-height: 4rem;
+        }
+      }
+    }
+
+    .centerMailContent {
+      @include flexBoxCenter;
+      font-family: Rubik, sans-serif;
+      color: white;
+      margin: 1.5rem 0 1.8rem 0;
+
+      .dummPara {
+        width: 42rem;
+        p {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .inputMailButton {
+      @include flexBoxSpace;
+      border: 2px solid white;
+      border-radius: 0.7rem;
+      width: 100%;
+      padding: 1.2rem;
+      gap: 1rem;
+
+      .inputBoxMail {
+        color: white;
+        width: 100%;
+
+        input {
+          height: 5rem;
+          width: 100%;
+          color: white;
+          outline: none;
+          border: none;
+          padding-left: 0.8rem;
+          background-color: #00acb1;
+
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
+
+      .buttonWithMessageIcon {
+        @include flexBoxSpace;
+        border: none;
+        cursor: pointer;
+
+        button {
+          @include flexBoxSpace;
+          border-radius: 0.4rem;
+          outline: none;
+
+          padding: 1rem;
+          gap: 0.8rem;
+          color: #005963;
+          border: none;
+
+          .messageMailIcon {
+            font-size: 3rem;
+
+            .mesIcon {
+              @include flexBoxCenter;
+            }
+          }
+
+          .subscribeHeading {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .rightSideMail {
+    background-color: white;
+    margin-left: 16rem;
+
+    .mainRightSideDiv {
+      @include flexBoxCenter;
+      margin: 2rem;
+      .upperTwoDiv,
+      .lowerTwoDiv {
+        padding: 3rem;
+
+        .oneDiv,
+        .secondDiv {
+          margin-bottom: 1rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+            transition: all 0.4s ease;
+
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.workProcessParentDiv {
+  background-color: #fcf7ff;
+  padding: 0 6rem;
+  margin-bottom: 1rem;
+
+  .upperWorkProcess {
+    @include flexBoxSpace;
+    gap: 4rem;
+
+    .workProcessHeading {
+      .smallHeadingProcess {
+        margin-top: 4rem;
+        color: #00acb1;
+        font-family: Rubik, sans-serif;
+        h5 {
+          font-size: 2rem;
+        }
+      }
+
+      .bigHeadingProcess {
+        font-family: Heebo, sans-serif;
+        color: #005963;
+        h3 {
+          margin-top: 0.8rem;
+          font-size: 6rem;
+          line-height: 5rem;
+        }
+      }
+    }
+
+    .workProcessPara {
+      @include flexBoxCenter;
+      gap: 1rem;
+      margin-top: 5rem;
+
+      .wpPara {
+        width: 42rem;
+        color: #686a6f;
+        font-family: Rubik, sans-serif;
+
+        p {
+          font-size: 1.9rem;
+        }
+      }
+
+      .buttonAppointment {
+        padding: 1rem;
+        button {
+          background-color: #32bab6;
+          font-family: Rubik, sans-serif;
+          color: white;
+          font-size: 2rem;
+          height: 100%;
+          border: none;
+          border-radius: 1rem;
+          outline: none;
+          padding: 2rem;
+        }
+      }
+    }
+  }
+
+  .lowerWorkProcess {
+    margin-top: 2rem;
+    .mainLowerWorkProcess {
+      @include flexBoxSpace;
+      .oneLowerWorkDiv {
+        display: flex;
+        gap: 2rem;
+        .lowerWorkDivIcon {
+          height: 10rem;
+          background-color: white;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+          .wpDifferentIcons {
+            @include flexBoxCenter;
+            padding: 2rem;
+            font-size: 6rem;
+            color: #32bab6;
+          }
+        }
+        .lowerWorkDivContent {
+          .lowerWorkHeading {
+            h4 {
+              font-size: 2.7rem;
+              color: #005963;
+              font-family: Heebo, sans-serif;
+              line-height: 3rem;
+            }
+          }
+
+          .lowerWorkParagraph {
+            @include flexBoxCenter;
+            width: 30rem;
+            margin: 1rem 0;
+
+            p {
+              font-size: 2rem;
+              line-height: 2.7rem;
+              color: #686a6f;
+              font-family: Rubik, sans-serif;
+            }
+          }
+
+          .lowerWorkStep {
+            color: #32bab6;
+            font-family: Rubik, sans-serif;
+
+            h4 {
+              font-size: 2.7rem;
+            }
+          }
+        }
+      }
+
+      .secondLowerWorkDiv {
+        margin: 2rem 3rem;
+      }
+    }
+  }
+}
+
+.mainArticleDiv {
+  background-color: #fcf7ff;
+
+  .articleHeading {
+    @include flexBoxCenter;
+    flex-direction: column;
+
+    .articleSmallHeading {
+      color: #00acb1;
+      margin-top: 2rem;
+
+      h4 {
+        font-size: 2rem;
+        font-family: Rubik, sans-serif;
+      }
+    }
+
+    .articleBigHeading {
+      color: #005963;
+      h3 {
+        font-size: 6rem;
+        font-family: Heebo, sans-serif;
+      }
+    }
+  }
+
+  .articleCard {
+    margin-top: 2rem;
+    .mainArticleCard {
+      @include flexBoxCenter;
+      gap: 5rem;
+
+      .secondLevelCard {
+        margin: 1rem 0;
+        border: 2px solid #eaf1f2;
+        padding: 0 2rem;
+        background-color: white;
+
+        .underArticleCard {
+          margin: 1rem 0;
+
+          .articleImage {
+            position: relative;
+
+            .firstImageClass {
+              overflow: hidden;
+              border-radius: 1.4rem;
+              img {
+                transition: all 0.4s ease;
+                &:hover {
+                  transform: scale(1.1);
+                }
+              }
+            }
+
+            .dateDiv {
+              position: absolute;
+              top: 21.5rem;
+              right: 1.5rem;
+              font-size: 1.5rem;
+              padding: 0.7rem 1rem;
+              border-radius: 0.5rem;
+              font-family: Heebo, sans-serif;
+              color: white;
+              font-weight: 600;
+              background-color: #00acb1;
+            }
+          }
+
+          .lowerArticleDiv {
+            margin-top: 3rem;
+
+            .iconsArticleDiv {
+              display: flex;
+
+              .userIcon {
+                @include flexBoxCenter;
+                span {
+                  @include flexBoxCenter;
+                  font-size: 1.8rem;
+                  color: #686a6f;
+                  margin-right: 1rem;
+                }
+                p {
+                  color: #686a6f;
+                  font-size: 1.6rem;
+                  font-family: Heebo, sans-serif;
+                }
+              }
+
+              .folderIcon {
+                margin: 0 2rem;
+              }
+            }
+
+            .cardArticleHeading {
+              margin-top: 1rem;
+              color: #005963;
+              width: 22rem;
+              h5 {
+                font-size: 2rem;
+                font-family: Heebo, sans-serif;
+              }
+            }
+
+            .cardArticleReadMore {
+              color: #00acb1;
+              margin-top: 1rem;
+              p {
+                font-size: 2rem;
+                font-weight: 600;
+                font-family: Rubik, sans-serif;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.gallery__item {
+  position: relative;
+  flex-basis: calc(25% - 20px);
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  width: 20%;
+
+  &:hover {
+    img {
+      transform: scale(1.1);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .gallery__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    i {
+      font-size: 32px;
+      color: #fff;
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+
+  &:hover {
+    .gallery__overlay {
+      opacity: 1;
+
+      i {
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  .lightbox__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+
+  .lightbox__content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      max-height: calc(100vh - 120px);
+    }
+
+    .lightbox__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px;
+      background-color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.mainClientDiv {
+  @include flexBoxCenter;
+  flex-direction: column;
+  border: 2px solid black;
+
+  .upperClientDiv {
+    @include flexBoxCenter;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    .upperClientUpperHeading {
+      font-family: Rubik, sans-serif;
+      color: #00acb1;
+
+      h5 {
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+
+    .upperClientLowerHeading {
+      font-family: Heebo, sans-serif;
+      color: #005963;
+
+      h3 {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .lowerClientDiv {
+    width: 100%;
+
+    .sliderMainDiv{
+      margin: 0 2rem;
+      height: 100%;
+
+      .slick-slide{
+        margin-right: 1rem;
+      }
+    }
+  }
+}
